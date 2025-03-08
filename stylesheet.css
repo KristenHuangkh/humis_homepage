@@ -1,19 +1,13 @@
 div#container {
-    border: 1px solid red;
     min-height: 600px;
-    /*width: 700px; /*giving a width centers the box with the margin*/
     margin: 0 auto 0 auto;
-    font-family: Arial, Helvetica, sans-serif; /* use arial, if not there, use helvetica, if not, then use any sans-serif */
+    font-family: Arial, Helvetica, sans-serif; 
 
-
-    /* >* direct descendent */
-    /* * every item */
     > * {
-        border: 1px dotted blue;
-        margin: 5px 10px 20px; /* trbl */
+        margin: 5px 10px 20px;
 
             > img {
-                width: 100%; /* its width is whatever width it's parent is (parent is header >> div >> viewport) */
+                width: 100%;
             }
     }
 
@@ -22,30 +16,28 @@ div#container {
         div.nav {
             text-align: right;
             padding-right: 15px;
-            font-size: 12px;
+            font-size: 15px;
 
             a {
                 color: black;
                 text-decoration: none;
                 text-transform: uppercase;
-                /*margin is exterior, padding is interior */
 
-
-                &:hover { /* hovering over any a tag will make it underlined */
+                &:hover {
                     text-decoration: underline;
-                }
-
-                img {
-                    vertical-align:  auto;
                 }
             }
 
-            span:after { /*puts stuff after span */
+            img {
+                margin: 0 20px 0 0;
+            }
+
+            span:after {
                 content: "|";
                 margin: 0 5px;
             }
 
-            &.bottom-nav { /*This targets a nav element whose class is nav and whose class is bottom-nav */
+            &.bottom-nav {
                 a {
                     text-transform: lowercase;
                     font-size: 11px;
@@ -59,23 +51,23 @@ div#container {
             border-radius: 15px;
             border: 1px solid black;
             margin: 15px 10px 70px;
-            padding: 20px;
+            padding: 20px 20px 100px 20px;
             min-height: 500px;
             position: relative;
 
             nav.left-side {
                 float: left;
-                width: 30%;
+                width: 25%;
 
                 a {
                     border-bottom: 1px solid black;
-                    display: block; /*converts links from being inline to block */
+                    display: block;
                     color: black;
-                    font-size: 11px;
+                    font-size: 15px;
                     text-transform: uppercase;
                     text-decoration: none;
-                    /*margin: 0 0 10px 0;*/
-                    padding: 15px 0 15px 20px;
+                    padding: 20px 0 15px 20px;
+                    margin: 0 0 0 70px;
 
                     &:hover {
                         background-color: saddlebrown;
@@ -95,25 +87,26 @@ div#container {
                 }
 
                 h2 {
-                    color:red;
-                    border-bottom: 2px dotted red;
+                    color: #787c34;
+                    border-bottom: 2px dashed red;
                     text-transform: uppercase;
                     font-weight: normal;
                 }
 
                 p {
-                    font-size: 12px;
+                    font-size: 17px;
                     span {
                         font-weight: bold;
                         font-size: 110%;
                     }
 
-                    &.learn-more { /* & means it will apply to only to a p with a class of learn-more */
+                    &.learn-more { 
                         text-align: right;
 
                         a {
                             color: red;
                             text-decoration: none;
+                            text-transform: uppercase;
 
                             &:hover {
                                 text-decoration: underline;
@@ -129,19 +122,20 @@ div#container {
             nav.login {
                 position: absolute;
                 bottom: 0;
-                left: 0;
+                left: 20px;
                 margin: 0 0 70px 30px;
 
                 img {
                     display: block;
                     margin: 10px 0 0;
+                    width: 180%;
                 }
             }
         }
     }
 
     footer {
-        background-color: darkolivegreen;
+        background-color: #787c34;
         color: white;
         font-size: 10px;
         text-align: center;
